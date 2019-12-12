@@ -18,8 +18,9 @@ export class LogoutComponent implements OnInit {
   constructor(private http: HttpClient,  private router: Router) { }
 
   ngOnInit() {
-    let headers = { headers: new HttpHeaders({ "Authorization": "shazi "+ localStorage.getItem('JWT-Token')})}
-    this.http.get(BSEURL + "/logout/"+localStorage.getItem('currUserName'), headers)
+    // let headers = { headers: new HttpHeaders({ "Authorization": "shazi "+ localStorage.getItem('JWT-Token')})}
+    // this.http.get(BSEURL + "/logout/"+localStorage.getItem('currUserName'), headers)
+    this.http.get(BSEURL + "/logout/"+localStorage.getItem('currUserName'))
       .subscribe(res=>{
         // this.message=
         this.getFirstData(res);
