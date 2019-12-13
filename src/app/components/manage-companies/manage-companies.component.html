@@ -55,8 +55,8 @@
     <div class="form-group">
       <span><label for="companyStatus">Company Status</label>
       <select class="form-control" id="companyStatus" name="companyStatus" [(ngModel)]="company.companyStatus" #companyStatus="ngModel">
-        <option>0</option>
-        <option>1</option>
+        <option>Deactivated</option>
+        <option>Activated</option>
       </select>
     </span>
   </div>
@@ -67,7 +67,7 @@
     <input type="text" class="form-control" id="stockExchange" name="stockExchange" [(ngModel)]="ipodetails.stockExchange" #stockCode="ngModel"></span>
 </div>
 <div class="form-group">
-  <span><label for="pricePerShare">Price PerShare</label>
+  <span><label for="pricePerShare">Price PerShare($)</label>
   <input type="text" class="form-control" id="pricePerShare" name="pricePerShare" [(ngModel)]="ipodetails.pricePerShare" #stockCode="ngModel"></span>
 </div>
 <div class="form-group">
@@ -79,7 +79,7 @@
   <input type="datetime" class="form-control" id="openDateTime" name="openDateTime" [(ngModel)]="ipodetails.openDateTime" #stockCode="ngModel" placeholder="yyyy-MM-dd HH:mm:ss"></span>
 </div>
 <div class="form-group">
-  <span><label for="ipoRemarks">Ipo Remarks</label>
+  <span><label for="ipoRemarks">IPO Remarks</label>
   <input type="text" class="form-control" id="ipoRemarks" name="ipoRemarks" [(ngModel)]="ipodetails.IpoRemarks" #stockCode="ngModel"></span>
 </div>
 <!-- end for IPO Add -->
@@ -95,7 +95,7 @@
 
 
   <div class="content" role="main">
-      <label>Company name:
+      <label>Company Name:
           <input type="text" class = "advancedSearchTextbox" placeholder="search" [(ngModel)]="search" id="listSearch">
       </label>
       <table datatable class="table"  style="border:1px solid #f3f3f3">
@@ -107,7 +107,7 @@
           <th>Turnover($)</th>
           <th>CEO</th>
           <th>Board Of Directors</th>
-          <th>Listed in Stock Exchanges</th>
+          <th>Listed in SE</th>
           <th>Sector Name</th>
           <th>Brief Writeup</th>
           <th>Stock Code</th>
@@ -187,8 +187,8 @@
           <div class="form-group">
             <span><label for="companyStatus">Company Status</label>
               <select class="form-control" id="companyStatus" name="companyStatus" [(ngModel)]="companyForm.companyStatus" #companyStatus="ngModel">
-                <option>N</option>
-                <option>Y</option>
+                <option>Deactivated</option>
+                <option>Activated</option>
               </select>
           </span>
         </div>
@@ -196,7 +196,7 @@
                 </div>
                 <div class="modal-footer">
                   <input type="button" class="btn btn-primary" data-dismiss="modal" value= "Cancel"/>
-                  <input type="button" class="btn btn-primary" data-dismiss="modal" (click)="update(i)" value="Submit"/>
+                  <input type="button" class="btn btn-primary" data-dismiss="modal" (click)="update()" value="Submit"/>
                 </div>
               </div>
             </div>

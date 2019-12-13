@@ -17,7 +17,7 @@ export class ManageCompaniesComponent implements OnInit {
   companyipo = new CompanyIPO();
   companyForm = new Company();
   ipodetails = new IpoDetails();
-  public search:any = '';
+  public search: any = '';
   constructor(private companyservice: CompanyServiceService ) { }
 
   ngOnInit() {
@@ -75,6 +75,7 @@ add() {
 addall() {
   console.log('this.company', this.company);
   this.companyipo.company = this.company;
+  this.ipodetails.companyName = this.company.companyName;
   this.companyipo.ipo = this.ipodetails;
   this.companyservice.addCompanyIpo(this.companyipo)
   .subscribe(
