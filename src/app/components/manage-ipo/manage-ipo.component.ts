@@ -15,11 +15,11 @@ export class ManageIPOComponent implements OnInit {
 
   ngOnInit() {
     this.getIpos();
-    laydate.render({
-      elem: '#opendatetime',
-      type: 'datetime',
-      theme: '#4DC6FD'
-    });
+    // laydate.render({
+    //   elem: '#opendatetime',
+    //   type: 'datetime',
+    //   theme: '#4DC6FD'
+    // });
   }
   getIpos() {
     this.manageipoService.getIPOs()
@@ -59,24 +59,29 @@ export class ManageIPOComponent implements OnInit {
   }
 
   updateipo() {
-    this.manageipoService.updateIpo(this.ipoForm)
-    .subscribe(
-      res => {
-        if (res.status === 200) {
-          console.log('response', res);
-          alert (res.msg);
-          this.getIpos();
-          this.ipoForm = new IPO();
-        } else {
-          alert (res.msg);
-          this.getIpos();
-          this.ipoForm = new IPO();
-        }
-      },
-      error => {
-        this.errMsg = error;
-        alert(error);
-      }
-    );
+    console.log('Open Date Time is required!', this.ipoForm.openDateTime);
+    if ((this.ipoForm.openDateTime === null) || (this.ipoForm.openDateTime === undefined)) {
+      alert('Open Date Time is required! and format must be yyyy-MM-dd HH:mm:ss!');
+    } else {
+      this.manageipoService.updateIpo(this.ipoForm)
+        .subscribe(
+          res => {
+            if (res.status === 200) {
+              console.log('response', res);
+              alert (res.msg);
+              this.getIpos();
+              this.ipoForm = new IPO();
+            } else {
+              alert (res.msg);
+              this.getIpos();
+              this.ipoForm = new IPO();
+            }
+          },
+          error => {
+            this.errMsg = error;
+            alert(error);
+          }
+        );
+    }
   }
 }

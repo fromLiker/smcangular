@@ -4,6 +4,7 @@ export class IPO {
   stockExchange: string;
   pricePerShare: number;
   totalNumber: string;
-  openDateTime: Date;
+  // openDateTime: Date;
+  openDateTime: string;
   ipoRemarks: string;
 }

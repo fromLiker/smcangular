@@ -22,12 +22,12 @@ export class ManageCompaniesComponent implements OnInit {
 
   ngOnInit() {
     this.getCompanies();
-    laydate.render({
-      elem: '#openDateTime',
-      type: 'datetime',
-      theme: '#4DC6FD'
-    });
-}
+    // laydate.render({
+    //   elem: '#openDateTime',
+    //   type: 'datetime',
+    //   theme: '#4DC6FD'
+    // });
+  }
 
 getCompanies() {
   this.companyservice.getCompanies()
@@ -77,28 +77,33 @@ addall() {
   this.companyipo.company = this.company;
   this.ipodetails.companyName = this.company.companyName;
   this.companyipo.ipo = this.ipodetails;
-  this.companyservice.addCompanyIpo(this.companyipo)
-  .subscribe(
-    res => {
-      if (res.status === 200) {
-        console.log('response', res);
-        // this.companys = res.data;
-        // this.companys.push();
-        this.companies.push(this.company);
-        alert (res.msg);
-        this.getCompanies();
-        this.company = new Company();
-      } else {
-        alert (res.msg);
-        this.getCompanies();
-        this.company = new Company();
+  console.log('companyipo.ipo.openDateTime>>>', this.companyipo.ipo.openDateTime);
+  if (this.companyipo.ipo.openDateTime === undefined ||  this.companyipo.ipo.openDateTime === null) {
+    alert('Open Date Time is required! and format must be yyyy-MM-dd HH:mm:ss!');
+  } else {
+    this.companyservice.addCompanyIpo(this.companyipo)
+    .subscribe(
+      res => {
+        if (res.status === 200) {
+          console.log('response', res);
+          // this.companys = res.data;
+          // this.companys.push();
+          this.companies.push(this.company);
+          alert (res.msg);
+          this.getCompanies();
+          this.company = new Company();
+        } else {
+          alert (res.msg);
+          this.getCompanies();
+          this.company = new Company();
+        }
+      },
+      error => {
+        this.errMsg = error;
+        alert(error);
       }
-    },
-    error => {
-      this.errMsg = error;
-      alert(error);
-    }
-  );
+    );
+  }
 }
 update() {
   // id = this.exchange.exchangeid;

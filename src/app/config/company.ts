@@ -18,8 +18,9 @@ export class IpoDetails {
   pricePerShare: number;
   totalNumber: number;
   listedinskex: string;
-  openDateTime: Date;
-  IpoRemarks: string;
+  // openDateTime: Date;
+  openDateTime: string;
+  ipoRemarks: string;
 }
 export class CompanyIPO {
   company: Company;
