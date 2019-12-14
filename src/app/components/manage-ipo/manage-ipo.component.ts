@@ -59,8 +59,8 @@ export class ManageIPOComponent implements OnInit {
   }
 
   updateipo() {
-    console.log('Open Date Time is required!', this.ipoForm.openDateTime);
-    if ((this.ipoForm.openDateTime === null) || (this.ipoForm.openDateTime === undefined)) {
+    console.log('Open Date Time is required!', this.ipoForm.openDateTime.toString.length);
+    if (this.ipoForm.openDateTime.toString.length === 0) {
       alert('Open Date Time is required! and format must be yyyy-MM-dd HH:mm:ss!');
     } else {
       this.manageipoService.updateIpo(this.ipoForm)
