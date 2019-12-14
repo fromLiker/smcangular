@@ -127,7 +127,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let cp of companies; let i = index" [attr.data-index]="i">
+          <tr *ngFor="let cp of companies | searchPipe:'companyName':search; let i = index" [attr.data-index]="i">
             <!-- <td>{{cp.companyid}}</td> -->
             <td>{{cp.companyCode}}</td>
             <td>{{cp.companyName}}</td>
