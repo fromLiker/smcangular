@@ -23,7 +23,7 @@ export class ImportExcelComponent implements OnInit {
   uploader: FileUploader = new FileUploader({
     // url: 'http://9.112.77.89:8080/import/data',
     // url: 'http://localhost:8084/admin/import/data',
-    // Authorization: 'Shazi ' + localStorage.getItem('JWT-Token')
+    // Authorization: 'Bearer ' + localStorage.getItem('JWT-Token')
     url: this.uploadURL,
     method: 'POST',
     itemAlias: 'file',
@@ -31,7 +31,7 @@ export class ImportExcelComponent implements OnInit {
     removeAfterUpload: true,
     allowedFileType: ['xlsx', 'xls'],
     headers: [
-      {name: 'Authorization', value: `Shazi ${localStorage.getItem('JWT-Token')}`}
+      {name: 'Authorization', value: `Bearer ${localStorage.getItem('JWT-Token')}`}
 
     ]
   });
