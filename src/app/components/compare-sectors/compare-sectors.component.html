@@ -7,7 +7,8 @@
     <div class="row">
         <div class="col-md-3 col-md-offset-3"><span style="font-size: large; float: center;">Select Stock Exchange:</span>&nbsp;&nbsp;</div>
         <div class="col-md-3">
-            <select class="form-control" id="exchange" (change)="changeBseOrNse($event.target.value);">
+            <!-- <select class="form-control" id="exchange" (change)="changeBseOrNse($event.target.value);"> -->
+            <select class="form-control" id="exchange">
                 <option value="bse">BSE</option>
                 <option value="nse">NSE</option>
             </select>
@@ -34,7 +35,8 @@
             <div class="col-md-6 col-md-offset-3"><hr/></div>
             <div class="col-md-3 col-md-offset-3"><span style="font-size: large; float: center;">Select Stock Exchange:</span>&nbsp;&nbsp;</div>
             <div class="col-md-3">
-                <select class="form-control" (change)="changeSecondBseOrNse($event.target.value);">
+                <!-- <select class="form-control" (change)="changeSecondBseOrNse($event.target.value);"> -->
+                <select class="form-control">
                     <option value="bse">BSE</option>
                     <option value="nse">NSE</option>
                 </select>
