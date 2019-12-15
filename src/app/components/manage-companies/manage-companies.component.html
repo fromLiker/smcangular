@@ -1,9 +1,9 @@
 <div class="content" role="main">
-    <div class="row align-items-center justify-content-center">
-      <h2><strong>MANAGEMENT COMPANY</strong></h2>
-    </div>
-  
-    <input class="btn btn-primary" type="button" value="Add" data-toggle="modal" data-target="#add-btn"/>
+  <div class="row align-items-center justify-content-center">
+    <h2><strong>MANAGEMENT COMPANY</strong></h2>
+  </div>
+</div>  
+    <!-- <input class="btn btn-primary" type="button" value="Add" data-toggle="modal" data-target="#add-btn"/> -->
     <div class="modal fade" id="add-btn" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <form class="form-addcompany">
         <div class="modal-dialog" role="document">
@@ -105,10 +105,18 @@
       </form>
     </div>
   
-    <div class="content" role="main">
-      <label>Company Name:
+    <div class="row" style="padding-left: 40%;">
+      <div class="col-md-6">
+        <label>Company Name:
           <input type="text" class = "advancedSearchTextbox" placeholder="search" [(ngModel)]="search" id="listSearch">
-      </label>
+        </label>
+      </div>
+      <div class="col-md-6">
+        <input class="btn btn-primary" type="button" value="Add" data-toggle="modal" data-target="#add-btn"/>
+      </div>
+    </div>
+
+    <div class="content" role="main">
       <table datatable class="table"  style="border:1px solid #f3f3f3">
         <thead>
           <tr>
@@ -221,5 +229,5 @@
         </tbody>
       </table>
     </div>
-  </div>
+
   
