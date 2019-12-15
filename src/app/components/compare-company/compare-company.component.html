@@ -1,3 +1,8 @@
+<div class="content" role="main">
+    <div class="row align-items-center justify-content-center">
+        <h2><strong>COMPARE COMPANY</strong></h2>
+    </div>
+</div>
 <div class="big-main" style="padding-top: 2%;">
     <div class="row">
         <div class="col-md-3 col-md-offset-3"><span style="font-size: large; float: center;">Select Company/Sector:</span>&nbsp;</div>
@@ -77,7 +82,7 @@
         </div>
     </div>
 
-    <div id="indicateDiv"  style="display: none;">
+    <div id="indicateDiv"  style="display: block;">
         <div class="row" >
             <div class="col-md-3 col-md-offset-3"><span style="font-size:large; float: center;">From period:</span></div>
             <div class="col-md-3">
@@ -135,9 +140,9 @@
 
     <br>
     <div id="chartRow" class="row">
-        <div class="col-md-8" >
+        <div class="col-md-3" >
             <div id="mergeButton" style="display: none; float: right;">
-                <button (click)="mergeCompanyData()">Merge Chart</button>
+                <button type="button" class="btn btn-primary" (click)="mergeCompanyData()">Merge Chart</button>
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
