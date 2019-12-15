@@ -122,22 +122,22 @@
     </div>
     <div class="row">
         <div class="col-md-3 col-md-offset-9">
-            <button id="addbutton" (click)="add()" type="button" class="btn btn-danger" style="width: 25%;">Add</button>
-            <button id="removebutton" (click)="remove()" type="button" class="btn btn-danger" style="width: 25%; display: none;">Remove</button>
+            <button id="addbutton" (click)="add()" type="button" class="btn btn-primary" style="width: 25%;">Add</button>
+            <button id="removebutton" (click)="remove()" type="button" class="btn btn-primary" style="width: 25%; display: none;">Remove</button>
         </div>
     </div>
 
     <div class="row" style="padding-top: 2%;">
         <div class="col-md-3 col-md-offset-5">
-            <button (click)="getCharts()" type="button" class="btn btn-warning" style="width: 100%;">Generate Chart</button>
+            <button (click)="getCharts()" type="button" class="btn btn-primary" style="width: 100%;">Generate Chart</button>
         </div>
     </div>
 
-    
+    <br>
     <div id="chartRow" class="row">
-        <div class="col-md-1" >
+        <div class="col-md-8" >
             <div id="mergeButton" style="display: none; float: right;">
-                <button (click)="mergeCompanyData()">merge as single chart </button>
+                <button (click)="mergeCompanyData()">Merge Chart</button>
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
