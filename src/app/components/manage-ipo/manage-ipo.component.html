@@ -1,5 +1,8 @@
 <!--All IPOs Table Start-->
 <div class="content" role="main">
+  <div class="row align-items-center justify-content-center">
+    <h2><strong>UPDATE IPO DETAILS</strong></h2>
+  </div>
   <table datatable class="table"  style="border:1px solid #f3f3f3">
     <thead>
       <tr>
@@ -24,7 +27,7 @@
         <td>{{ipo.totalNumber}}</td>
         <td>{{ipo.openDateTime}}</td>
         <td>{{ipo.ipoRemarks}}</td>
-        <td><input class="btn btn-info" type="button" value="Edit" data-toggle="modal" data-target="#update-btn-ipo" (click)="currentIpo(i)" />
+        <td><input class="btn btn-primary" type="button" value="Edit" data-toggle="modal" data-target="#update-btn-ipo" (click)="currentIpo(i)" />
         </td>
         <!--Edit IPO start-->
         <div class="modal fade" id="update-btn-ipo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

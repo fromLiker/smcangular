@@ -1,15 +1,18 @@
 <div class="content" role="main">
+  <div class="row align-items-center justify-content-center">
+    <h2><strong>IMPORT DATA</strong></h2>
+  </div>
   <div class="center">
     <div id="upload" class="form-group" >
-      <label for="importexcel" class="control-label lable">Import Excel</label>
+      <!-- <label for="importexcel" class="control-label lable">Import Excel</label> -->
       <div>
         <input type="text" [value]="selectFileName" class="form-control col-sm-4" readonly="true"/>
       </div> 
       <input type="file" id="file" accept=".xlsx" ng2FileSelect [uploader]="uploader" style="filter:alpha(opacity=0);opacity:0;width: 0;height: 0;" (change)="selectedFileOnChanged($event)" />
-      <input class="btn btn-primary" type="button" value="Browser" (click)="selectFile()"/>
-      <input class="btn btn-primary" type="button" value="Upload" (click)="uploadFile()" [disabled]="btnUploadIsDisabled"/>           
+      <input class="btn btn-primary" type="button" value="Browser" (click)="selectFile()"/>&nbsp;&nbsp;&nbsp;&nbsp;
+      <input class="btn btn-primary" type="button" value="Upload" (click)="uploadFile()" [disabled]="btnUploadIsDisabled"/>&nbsp;&nbsp;&nbsp;&nbsp;         
       <input class="btn btn-primary" type="button" value="Clean" (click)="fileDelete()" [disabled]="btnUploadIsDisabled"/>           
-      <br>
+      <br><br>
       <a title="{{title}}"  href="assets/templates/sample_stock_data_template.xlsx " download="sample_stock_data_template.xlsx">
         <i class="icon-download" ></i><span>{{title}}</span>  
       </a>

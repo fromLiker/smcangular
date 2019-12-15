@@ -1,9 +1,9 @@
 <div class="content" role="main">
     <div class="row align-items-center justify-content-center">
-      <h2><strong>COMPANY MANAGEMENT</strong></h2>
+      <h2><strong>MANAGEMENT COMPANY</strong></h2>
     </div>
   
-    <input class="btn btn-primary btn-add" type="button" value="Add" data-toggle="modal" data-target="#add-btn"/>
+    <input class="btn btn-primary" type="button" value="Add" data-toggle="modal" data-target="#add-btn"/>
     <div class="modal fade" id="add-btn" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <form class="form-addcompany">
         <div class="modal-dialog" role="document">
@@ -139,7 +139,7 @@
             <td>{{cp.brifewriteup}}</td>
             <td>{{cp.stockCode}}</td>
             <td>{{cp.companyStatus}}</td>
-            <td><input class="btn btn-info" type="button" value="Edit" data-toggle="modal" data-target="#update-btn" (click)="currentCompany(i)" /></td>
+            <td><input class="btn btn-primary" type="button" value="Edit" data-toggle="modal" data-target="#update-btn" (click)="currentCompany(i)" /></td>
             <!--Edit Company start-->
             <div class="modal fade" id="update-btn" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <form class="form-editexchange">
