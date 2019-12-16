@@ -32,10 +32,11 @@ pipeline {
         }
 
         withCredentials([usernamePassword(credentialsId: 'liker163ID', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
-          sh 'docker login -u $USERNAME -p $PASSWORD'
+          // sh 'docker login -u $USERNAME -p $PASSWORD'
           sh 'docker image build -t ${DOCKERHUBNAME}/smcui .'
-          sh 'docker push ${DOCKERHUBNAME}/smcui'
-          sh 'docker run -d -p 4200:80 --network smc-net --name smcui ${DOCKERHUBNAME}/smcui'
+          // sh 'docker push ${DOCKERHUBNAME}/smcui'
+          // sh 'docker run -d -p 4200:80 --network smc-net --name smcui ${DOCKERHUBNAME}/smcui'
+          sh 'docker run -d -p 4200:80 --memory=400M --name smcui ${DOCKERHUBNAME}/smcui'
         }
       }
     }
