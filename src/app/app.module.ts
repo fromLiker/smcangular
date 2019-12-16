@@ -19,8 +19,7 @@ import {
   CompareSectorsComponent,
   ChangepwdComponent,
   LogoutComponent,
-  HomeDetailComponent,
-  OtherComponent
+  HomeDetailComponent
 } from './components';
 
 import { FormsModule } from '@angular/forms';
@@ -61,7 +60,6 @@ import { SearchPipe } from './search.pipe';
     ChangepwdComponent,
     LogoutComponent,
     HomeDetailComponent,
-    OtherComponent,
     SearchPipe
   ],
 
@@ -70,7 +68,6 @@ import { SearchPipe } from './search.pipe';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    // HttpModule,
     FusionChartsModule,
     FileUploadModule
   ],
