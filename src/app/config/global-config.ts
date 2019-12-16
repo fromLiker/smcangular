@@ -1,5 +1,6 @@
 export class LocalURL {
-    // public static serverURL = 'http://localhost:8888/';
-    // pro
-    public static serverURL = 'http://106.54.194.33:8888/';
+    // dev
+    public static serverURL = 'http://localhost:8888/';
+    // prod
+    // public static serverURL = 'http://106.54.194.33:8888/';
 }
