@@ -14,7 +14,6 @@ import {
   LogoutComponent,
   ChangepwdComponent,
   CompareSectorsComponent,
-  // OtherComponent
 } from './components';
 
 
@@ -24,7 +23,6 @@ const routes: Routes = [
   {path: 'signup', component: SignupComponent},
   {path: 'home', component: HomeComponent,
   children: [
-    // {path: '', redirectTo: '', pathMatch: 'full'},
     {path: 'importExcel', component: ImportExcelComponent},
     {path: 'manageCompanies', component: ManageCompaniesComponent},
     {path: 'manageExchanges', component: ManageExchangesComponent},
@@ -32,7 +30,6 @@ const routes: Routes = [
     {path: 'IPOs', component: UserIpoComponent},
     {path: 'compareCompany', component: CompareCompanyComponent},
     {path: 'compareSectors', component: CompareSectorsComponent},
-    // {path: 'other', component: OtherComponent},
     {path: 'changepwd', component: ChangepwdComponent},
     {path: 'logout', component: LogoutComponent}
   ]},
