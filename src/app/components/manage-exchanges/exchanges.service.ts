@@ -22,7 +22,7 @@ export class ExchangesService {
   // readonly exchangesUrl = LocalURL.serverURL + 'exchange';
   // readonly allexchangesUrl = 'http://localhost:8081/search/exchange';
   // readonly exchangesUrl = 'http://localhost:8082/exchange';
-  readonly allexchangesUrl = LocalURL.serverURL + 'smcprice/search/exchange';
+  readonly allexchangesUrl = LocalURL.serverURL + 'smcexchange/search/exchange';
   readonly exchangesUrl = LocalURL.serverURL + 'smcexchange/admin/manage/exchange';
   // private exchangesUrl = 'api/exchange';  // URL to web api
   constructor(
